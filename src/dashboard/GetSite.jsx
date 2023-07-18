@@ -11,7 +11,7 @@ export function GetSite() {
   const getsitesData = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/v1/sites", {
+      const response = await fetch("https://texapon-server.onrender.com/api/v1/sites", {
         method: "get",
         headers: {
           "Content-Type": "application/json; charset=UTF-8",

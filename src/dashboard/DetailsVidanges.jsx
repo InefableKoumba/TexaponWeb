@@ -12,10 +12,10 @@ export function DetailsVidanges() {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:3000/api/v1/vidanges/byMonth/" +
-          new Date().getUTCMonth() +
-          "/" +
-          new Date().getFullYear(),
+        "https://texapon-server.onrender.com/api/v1/vidanges/byMonth/" +
+        new Date().getUTCMonth() +
+        "/" +
+        new Date().getFullYear(),
         {
           method: "get",
           headers: {
@@ -87,11 +87,10 @@ export function DetailsVidanges() {
                   vidanges.map((vidange) => (
                     <tr
                       key={vidange.id}
-                      className={`${
-                        vidange.nbre_heures_retard > 0
+                      className={`${vidange.nbre_heures_retard > 0
                           ? "bg-red-500 text-white"
                           : ""
-                      }`}
+                        }`}
                     >
                       <td className="border py-2 px-2">
                         {vidange["traitement"]["generator"]["Site"].id_site}

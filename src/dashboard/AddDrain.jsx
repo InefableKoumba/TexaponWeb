@@ -22,7 +22,7 @@ export function AddDrain() {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:3000/api/v1/get_data_to_create_treatment",
+        "https://texapon-server.onrender.com/api/v1/get_data_to_create_treatment",
         {
           headers: {
             "Content-Type": "application/json; charset=UTF-8",
@@ -51,7 +51,7 @@ export function AddDrain() {
   const create_drain = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/v1/traitements", {
+      const response = await fetch("https://texapon-server.onrender.com/api/v1/traitements", {
         method: "POST",
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
@@ -154,7 +154,7 @@ export function AddDrain() {
                   contentEditable={false}
                   disabled={true}
                   defaultValue={selectedData ? selectedData.regime : ""}
-                  onChange={(e) => {}}
+                  onChange={(e) => { }}
                   type="text"
                   placeholder="Régime de fonctionnement"
                   className="border py-2 rounded border-slate-500 px-2 w-full"

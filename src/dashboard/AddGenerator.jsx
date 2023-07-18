@@ -17,7 +17,7 @@ export function AddGenerator() {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:3000/api/v1/get_data_to_create_generator",
+        "https://texapon-server.onrender.com/api/v1/get_data_to_create_generator",
         {
           headers: {
             "Content-Type": "application/json; charset=UTF-8",
@@ -54,7 +54,7 @@ export function AddGenerator() {
     }
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/v1/generators", {
+      const response = await fetch("https://texapon-server.onrender.com/api/v1/generators", {
         method: "post",
         headers: {
           "Content-Type": "application/json; charset=UTF-8",

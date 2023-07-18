@@ -12,7 +12,7 @@ export function GetZone() {
   const getzone = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/v1/zones", {
+      const response = await fetch("https://texapon-server.onrender.com/api/v1/zones", {
         method: "get",
         headers: {
           "Content-Type": "application/json; charset=UTF-8",

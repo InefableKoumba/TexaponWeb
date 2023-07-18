@@ -17,7 +17,7 @@ export function AddSite() {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:3000/api/v1/get_data_to_create_site",
+        "https://texapon-server.onrender.com/api/v1/get_data_to_create_site",
         {
           headers: {
             "Content-Type": "application/json; charset=UTF-8",
@@ -50,7 +50,7 @@ export function AddSite() {
     }
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/v1/sites", {
+      const response = await fetch("https://texapon-server.onrender.com/api/v1/sites", {
         method: "post",
         headers: {
           "Content-Type": "application/json; charset=UTF-8",

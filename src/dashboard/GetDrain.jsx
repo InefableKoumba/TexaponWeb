@@ -11,7 +11,7 @@ export function GetDrain() {
   const gettraitements = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/v1/traitements", {
+      const response = await fetch("https://texapon-server.onrender.com/api/v1/traitements", {
         method: "get",
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
